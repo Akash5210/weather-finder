@@ -1,0 +1,177 @@
+.about{
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 1px;
+    font-size: 90%;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+}
+.top-container{
+    background-color: #EAF6F6;
+    margin-bottom: 30px;
+}
+.about h1{
+    padding-top: 50px;
+    font-size: 5rem;
+    font-family: 'Dancing Script', cursive;
+    margin-block-start: 0;
+    width: 30%;
+    margin: 0 auto;
+    color: #66BFBF;
+    line-height: 2;
+}
+.about h2{
+    color: #66BFBF;
+    width: 20%;
+    margin: 0 auto;
+    font-size: 3rem;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: normal;
+}
+.about h3{
+    color: #11999E;
+}
+.middle-container{
+    margin: 60px auto;
+}
+.profile{
+    width: 40%;
+    margin: 0 auto;
+}
+.skill-row{
+    width: 50%;
+    margin: 110px auto;
+    text-align: left;
+    line-height: 1.5;
+}
+#profile-img{
+    border-radius: 50%;
+    width: 150px;
+    outline: none;
+}
+.skill-img1{
+    width: 35%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: -32px;
+}
+.skill-img2{
+    width: 38%;
+    float: right;
+    margin-left: 30px;
+}
+.about .contact-me p{
+    margin-bottom: 63px;
+}
+.bottom-container{
+    background-color: #66BFBF;
+    margin-top: 91px;
+    padding: 47px 0;
+}
+.bottom-container a, .about .btn{
+    text-decoration: none;
+    color: #11999E;
+}
+.bottom-container p{
+    color: white;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.bottom-container a{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+.about a.btn{
+    background-color: #66BFBF;
+    border-radius: 8px;
+    padding: 13px 23px;
+    color: white;
+}
+.about a.btn:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.first-cloud{
+    position: absolute;
+    right: 213px;
+    top: 39px;
+}
+.second-cloud{
+    position: absolute;
+    top: 15rem;
+    left: 19rem;
+}
+.four-dot{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 41px;
+    margin-bottom: 50px;
+    color: grey;
+}
+@media only screen and (max-width:480px) {
+    .about{
+        font-size: 80%;
+    }
+    .top-container{
+        margin-bottom: -30px;
+    }
+    .first-cloud, .second-cloud{
+        width: 15%;
+    }
+    .about h1{
+        width: 55%;
+        font-size: 3.2rem;
+    }
+    .about h2{
+        width: 60%;
+        font-size: 1.7rem;
+    }
+    .mountain{
+        width:80%;
+    }
+    .profile {
+        width: 70%;
+    }
+    #profile-img{
+        width: 114px;
+    }
+    .four-dot{
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 27px;
+    }
+    .skill-row{
+        width: 70%;
+        margin: 20px auto;
+    }
+    .skill-img1 {
+        width: 25%;
+        margin-right: 7px;
+        margin-bottom: -7px;
+    }
+    .skill-img2{
+        width: 38%;
+        float: right;
+        margin-left: -27px;
+    }
+    .about a.btn {
+        border-radius: 8px;
+        padding: 9px 6px;
+        font-size: xx-small;
+    }
+    .about h3{
+        font-size: 1.1rem;
+        margin: 10px auto;
+    }
+    .about .contact-me p {
+        width: 350px;
+        margin: 0 auto 20px auto;
+    }
+    .bottom-container {
+        margin-top: -30px;
+        padding: 24px 0;
+    }
+    .bottom-container a {
+        font-size: 15px;
+    }
+}
