@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-export default function Navbar(props) {
+export default function Navbar({handleWeatherFinder}) {
     return (
         <nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
+            <div className="container-fluid mx-5">
                 <a className="navbar-brand" href="#">Weather-Finder</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@ export default function Navbar(props) {
                             <a className="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <Link to='/about'><a className="nav-link">About</a></Link>
+                            <Link to='/about'><a className="nav-link text-decoration-none">About</a></Link>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,7 +28,7 @@ export default function Navbar(props) {
                             </ul>
                         </li>
                     </ul>
-                    <form className="d-flex" onSubmit={props.handleWeatherFinder}>
+                    <form className="d-flex" onSubmit={handleWeatherFinder}>
                         <input type='text' className="form-control me-2" name="cityName" id="cityName" placeholder="Search Weather" />
                         <button className="btn btn-outline-success" type="submit"><span><i class="fa fa-search"></i></span></button>
                     </form>

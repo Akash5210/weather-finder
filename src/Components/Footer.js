@@ -1,21 +1,26 @@
-import React from 'react'
-import '../Styles/Footer.css'
+import React from 'react';
+import '../Styles/Footer.css';
 
-export default function Footer() {
+import facebook from "../Images/facebook.png";
+import instagram from "../Images/instagram.png";
+import twitter from "../Images/twitter.png";
+import github from "../Images/github.png";
+import linkedin from "../Images/linkedin.png";
+
+export default function Footer({socialMedia}) {
     const customerSubscribe = (e)=>{
         e.preventDefault();
         document.querySelector('#btn-text').textContent = 'Subscribed';
     }
+    const temp = [facebook, instagram, twitter, github, linkedin];
+    for(let i=0;i<socialMedia.length;i++){
+        socialMedia[i].icon = temp[i];
+    }
   return (
    <div className='container-fluid footer'>
        <div className='row mt-4 pt-5'>
-            <span className='col-md-3'>
-                <a href='https://www.facebook.com/Akashkumar0125'><i className="fa fa-facebook-square"></i></a>
-                <a href='https://www.instagram.com/itsakshah/'><i className="fa fa-instagram"></i></a>
-                <a href='https://twitter.com/Akash01raj'><i className="fa fa-twitter-square"></i></a>
-                <a href='https://github.com/Akash5210'><i className="fa fa-github-square" ></i></a>
-                <a href='https://www.linkedin.com/in/akash5210/'><i className='fa fa-linkedin-square'></i></a>
-                
+            <span className='col-6 col-md-3 social-link'>
+                {socialMedia.map(item => <a href={item.link} className='me-2'><img src={item.icon} width={"40px"}/></a>)}
             </span>
             <form className='col-md-8' onSubmit={customerSubscribe}>
                 <div className='row subscribe'>
@@ -25,7 +30,6 @@ export default function Footer() {
                 </div>
             </form>
        </div>
-       
    </div>
   )
 }
