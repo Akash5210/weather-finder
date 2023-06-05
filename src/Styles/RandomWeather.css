@@ -1,20 +1,31 @@
+.random-weather .card{
+    width: 14rem;
+    background: #D1D8EC;
+    color: rgb(102, 93, 93);
+    transition:transform .3s;
+    box-shadow: 4px 4px 8px #858da3, -2px -5px 24px #8897a3;
+}
+.random-weather .card:hover{
+    transform: scale(1.05);
+}
+.random-weather .card img{
+    height: 180px;
+}
+.random-weather .card h5{
+    background-color:#66b3ff;
+}
+.random-weather div.card-body{
+    height: 140px;
+}
 @media only screen and (max-width: 480px) {
     .random-weather{
         font-size: 80%;
         margin-left: 0px;
     }
     .random-weather .card{
-        color: rgb(102, 93, 93);
         width: 153px !important;
         height: 300px;
         margin-bottom: 10px;
         margin-right: 5px;
     }
-}
-.random-weather .card{
-    background: #D1D8EC;
-    transition:transform .3s;
-}
-.random-weather .card:hover{
-    transform: scale(1.05);
 }

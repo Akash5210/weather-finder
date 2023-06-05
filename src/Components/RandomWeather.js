@@ -25,11 +25,11 @@ export default function RandomWeather({city, urlVariable}) {
 
   return (
     <div className='container col-md-3 col-6 random-weather'>
-        <div className="card" style={{width: "14rem"}}>
-            <img src={randomCity[1]}  className="card-img-top" alt="weather icon" style={{height:'180px'}}/>
-            <h5 style={{position: 'absolute',background:'#66b3ff'}} className="px-2 py-1 rounded text-light">{city}</h5>
-            <div className="card-body" style={{height: '140px'}}>
-                <p className="card-text border-top">
+        <div className="card border-0">
+            <img src={randomCity[1]}  className="card-img-top" alt="weather icon"/>
+            <h5 className="px-2 py-1 position-absolute rounded text-light">{city}</h5>
+            <div className="card-body bg-primary bg-opacity-10">
+                <p className="card-text">
                     Lon: {randomCity[3]} Lat: {randomCity[4]} <br/>
                     Temp: {randomCity[0]}&#176;C  <br/>
                     Weather: {randomCity[2]} <br/>

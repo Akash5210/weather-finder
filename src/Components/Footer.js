@@ -17,19 +17,32 @@ export default function Footer({socialMedia}) {
         socialMedia[i].icon = temp[i];
     }
   return (
-   <div className='container-fluid footer'>
-       <div className='row mt-4 pt-5'>
-            <span className='col-6 col-md-3 social-link'>
+   <div className='container-fluid footer pb-1'>
+       <div className='row mt-4'>
+            <div className='col-8 col-md-3 mt-3 pt-4 mx-auto social-link'>
                 {socialMedia.map(item => <a href={item.link} className='me-2'><img src={item.icon} width={"40px"}/></a>)}
-            </span>
-            <form className='col-md-8' onSubmit={customerSubscribe}>
-                <div className='row subscribe'>
-                    <h3 className='col-md-5 text-light'>Subscribe to our news</h3>
-                    <input type='email' className='form-control col-md col-4 me-2' placeholder="Enter your Email" required/>
-                    <button type='submit' className='btn btn-warning text-secondary col-md-1' id='btn-text'>Subscribe</button>
+            </div>
+            <div className='col-md-8 mt-4 py-3 mx-auto subscribe rounded'>
+                <div className='row mx-auto'>
+                    <div className='col-md-5'>
+                        <h3 className='text-light mx-auto text-center'>Subscribe to our news</h3>
+                    </div>
+                    <div className='col-md-7'>
+                        <form onSubmit={customerSubscribe} className='d-inline-block'>
+                            <div className='row'>
+                                <div className='col-md-11'>
+                                    <input type='email' className='form-control' placeholder="Enter your Email" required/>
+                                </div>
+                                <div className='col-md-1'>
+                                    <button type='submit' className='btn btn-danger' id='btn-text'>Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
        </div>
+       <p className='small text-center'>&copy;Created and designed by Akash Kumar</p>
    </div>
   )
 }
